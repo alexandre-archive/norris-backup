@@ -1,4 +1,4 @@
-# Wordpress backup to Amazon S3
+# Backup to Amazon S3
 
 Backup your files, folders and MySQL/MariaDB databases to Amazon S3.
 
