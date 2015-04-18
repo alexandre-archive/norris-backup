@@ -43,7 +43,7 @@ def upload_file(bucket, key, file_name):
     '''
     logger.info('Uploading file "%s" to bucket "%s"...' % (file_name, bucket))
     conn = S3Connection()
-    bucket = conn.get_bucket(bucket)
+    bucket = conn.create_bucket(bucket)
     k = Key(bucket)
     k.key = key
     k.set_contents_from_filename(file_name)

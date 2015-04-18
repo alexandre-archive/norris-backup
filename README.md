@@ -40,6 +40,12 @@ Setup `logging.yml` as you want. There's a simple example for console and file l
 
 To get AWS access key see [AWS doc](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSGettingStartedGuide/AWSCredentials.html).
 
+## Upload
+
+The upload method will create the requested bucket if it does not exist or will return the existing bucket if it does exist.
+
+You can see more about bucket creation [here](http://boto.readthedocs.org/en/latest/s3_tut.html#creating-a-bucket).
+
 ## TODO
 
 - Yml file as an input for norris, instead command line arguments.
