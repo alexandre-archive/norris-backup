@@ -13,6 +13,16 @@ handlers:
     filename: norris.log
     formatter: simple
     level: INFO
+  email:
+    class: logging.handlers.SMTPHandler
+    mailhost: !!python/tuple [smtp.gmail.com, 587]
+    fromaddr: youremail@gmail.com
+    toaddrs: [toemail@gmail.com]
+    subject: 'Backup failed'
+    credentials: !!python/tuple [youremail, yourpwd]
+    secure: !!python/tuple [] # force to start tls
+    formatter: simple
+    level: ERROR
 loggers:
   console:
     level: DEBUG
@@ -20,7 +30,7 @@ loggers:
     propagate: no
   norris:
     level: INFO
-    handlers: [console, file]
+    handlers: [console, file, email]
     propagate: no
 root:
   level: DEBUG

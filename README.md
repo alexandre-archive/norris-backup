@@ -36,6 +36,8 @@ You can set AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY as environment variables
 
 Setup `logging.yml` as you want. There's a simple example for console and file logging.
 
+If you want to be mailed when an error occurred try `logging-with_email.yml`.
+
 ## Get an access key
 
 To get AWS access key see [AWS doc](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSGettingStartedGuide/AWSCredentials.html).
