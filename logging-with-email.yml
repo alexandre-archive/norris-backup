@@ -16,10 +16,10 @@ handlers:
   email:
     class: logging.handlers.SMTPHandler
     mailhost: !!python/tuple [smtp.gmail.com, 587]
-    fromaddr: youremail@gmail.com
-    toaddrs: [toemail@gmail.com]
+    fromaddr: youremail@gmail.com # set your email
+    toaddrs: [toemail@gmail.com] # set an email to receive error log
     subject: 'Backup failed'
-    credentials: !!python/tuple [youremail, yourpwd]
+    credentials: !!python/tuple [youremail, yourpwd] # set your login
     secure: !!python/tuple [] # force to start tls
     formatter: simple
     level: ERROR

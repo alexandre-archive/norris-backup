@@ -17,20 +17,22 @@ The best option is to schedule this script to run everyday.
 #### Backup a folder
 
 ```bash
-python backup.py --dir /path/to/my/folder --bucket mybucket --aws_access_key_id YOUR_ID --aws_secret_access_key YOUR_KEY
+python norris.py --dir /path/to/my/folder --bucket mybucket --aws_access_key_id YOUR_ID --aws_secret_access_key YOUR_KEY
 ```
 
 #### Backup a file
 
 ```bash
-python backup.py --dir /path/to/my/file.txt --bucket mybucket --aws_access_key_id YOUR_ID --aws_secret_access_key YOUR_KEY
+python norris.py --dir /path/to/my/file.txt --bucket mybucket --aws_access_key_id YOUR_ID --aws_secret_access_key YOUR_KEY
 ```
 #### Backup a database
 
 ```bash
-python backup.py --db my_database --user root --pwd my_pwd --bucket mybucket --aws_access_key_id YOUR_ID --aws_secret_access_key YOUR_KEY
+python norris.py --db my_database --user root --pwd my_pwd --bucket mybucket --aws_access_key_id YOUR_ID --aws_secret_access_key YOUR_KEY
 ```
-You can set AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY as environment variables if you want. See [Boto doc](http://boto.readthedocs.org/en/latest/s3_tut.html).
+Run `python norris.py` to see all command line options.
+
+You can set AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY as environment variables if you want. You can see more on [boto doc](http://boto.readthedocs.org/en/latest/s3_tut.html).
 
 ## Logging
 
@@ -50,5 +52,5 @@ You can see more about bucket creation [here](http://boto.readthedocs.org/en/lat
 
 ## TODO
 
-- Yml file as an input for norris, instead command line arguments.
+- Yaml file as an input for norris, instead command line arguments.
 - Upload old files, if there's an crash and zip file still available to upload.
