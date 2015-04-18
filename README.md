@@ -46,9 +46,7 @@ To get AWS access key see [AWS doc](http://docs.aws.amazon.com/AWSSimpleQueueSer
 
 ## Upload
 
-The upload method will create the requested bucket if it does not exist or will return the existing bucket if it does exist.
-
-You can see more about bucket creation [here](http://boto.readthedocs.org/en/latest/s3_tut.html#creating-a-bucket).
+To upload a file to S3 bucket, you need to create it manually with AWS Console. Norris, as boto, doesn't do this for you.
 
 ## TODO
 
