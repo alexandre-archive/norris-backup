@@ -48,6 +48,8 @@ To get AWS access key see [AWS doc](http://docs.aws.amazon.com/AWSSimpleQueueSer
 
 To upload a file to S3 bucket, you need to create it manually with AWS Console. Norris, as boto, doesn't do this for you.
 
+All files uploaded to S3 are zipped (Deflate).
+
 ## TODO
 
 - Yaml file as an input for norris, instead command line arguments.
