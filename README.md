@@ -53,4 +53,4 @@ All files uploaded to S3 are zipped (Deflate).
 ## TODO
 
 - Yaml file as an input for norris, instead command line arguments.
-- Upload old files, if there's an crash and zip file still available to upload.
+- Upload old files, if there's a crash and zip file still available to upload.
