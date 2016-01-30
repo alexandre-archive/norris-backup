@@ -1,0 +1,27 @@
+version: 1
+formatters:
+  simple:
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: simple
+    stream: ext://sys.stdout
+  file:
+    class: logging.FileHandler
+    filename: norris.log
+    formatter: simple
+    level: INFO
+loggers:
+  console:
+    level: DEBUG
+    handlers: [console]
+    propagate: no
+  norris:
+    level: INFO
+    handlers: [console, file]
+    propagate: no
+root:
+  level: DEBUG
+  handlers: [console]
