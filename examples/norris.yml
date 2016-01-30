@@ -3,7 +3,9 @@ aws_credentials:
   db_backup:
     key: your-key
     secret: your-secret
-    bucket: my-db-backup
+    bucket:
+      name: my-db-backup
+      path: 'database'
   general_backup:
     key: your-key
     secret: your-secret
@@ -18,12 +20,12 @@ aws_credentials:
       path: 'videos'
 
 # send backup notifications (success/fail)
-# notify:
-#   slack:
-#     webhook: 'https://hooks.slack.com/huJuh86Jk'
-#     channel: '#sysadmin'
-#     username: norris-backup
-#     icon_emoji: ':norris:'
+notify:
+  slack:
+    webhook: 'https://hooks.slack.com/huJuh86Jk'
+    channel: '#sysadmin'
+    username: norris-backup
+    icon_emoji: ':norris:'
 
 # backup files to S3.
 backup:

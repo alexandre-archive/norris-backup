@@ -10,9 +10,9 @@ import yaml
 
 from datetime import datetime
 
-from compress import Compress
-from dump import Dump
-from storage import S3Storage
+from .compress import Compress
+from .dump import Dump
+from .storage import S3Storage
 
 logger = logging.getLogger('norris')
 
