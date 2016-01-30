@@ -160,8 +160,8 @@ def run(config):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Backup your data to Amazon S3.', epilog='That\'s all folks.')
-    parser.add_argument('--log', nargs='?', default='logging.yml', help='Log configuration file.')
-    parser.add_argument('--config', nargs='?', default='norris.yml', help='Norris configuration file')
+    parser.add_argument('-l', '--log', nargs='?', metavar='file', default='logging.yml', help='Log configuration file.')
+    parser.add_argument('-c', '--config', nargs='?', metavar='file', default='norris.yml', help='Backup configuration file.')
     args = parser.parse_args()
 
     with open(args.log, 'r') as f:

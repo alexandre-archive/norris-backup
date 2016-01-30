@@ -45,8 +45,6 @@ class S3Storage:
 
             mp.complete_upload()
             logger.info('Upload done.')
-            return True
         except:
             mp.cancel_upload()
             logger.exception('Failed to upload file to S3: %s' % path)
-            return False
