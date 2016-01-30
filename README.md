@@ -1,4 +1,4 @@
-# Norris
+# Norris [![Build Status](https://travis-ci.org/alexandrevicenzi/norris-backup.svg?branch=master)](https://travis-ci.org/alexandrevicenzi/norris-backup)
 
 Backup your files, folders and MySQL/MariaDB databases to Amazon S3.
 
