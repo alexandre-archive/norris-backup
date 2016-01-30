@@ -57,10 +57,13 @@ def backup_folder(path, output_path, compressor, aws_credential=None):
     if not os.path.isdir(path):
         raise IOError('%s must be a directory.' % path)
 
-    output_file = get_file_name(output_path)
-    Compress.get_compressor(compressor).compress_folder(path, output_file)
-    get_storage(aws_credential).upload_file(output_file, output_file)
-    os.remove(output_file)
+    if compressor:
+        output_file = get_file_name(output_path)
+        Compress.get_compressor(compressor).compress_folder(path, output_file)
+        get_storage(aws_credential).upload_file(output_file, output_file)
+        os.remove(output_file)
+    else:
+        logger.info('Skipping folder backup due to no compressor found.')
 
 
 @safe
