@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import logging
-import os
+import subprocess
 
 logger = logging.getLogger(__name__)
 
@@ -22,10 +22,10 @@ class Dump(object):
 
 class MySQLDump(Dump):
 
-    def dump_db(self, db, user, pwd, output_file):
+    def dump_db(self, user, pwd, db, output_file):
         '''
         Dump database (MySQL/MariaDB).
         '''
         logger.info('Dumping DB %s to file %s...' % (db, output_file))
-        os.popen('mysqldump -u %s -p%s %s > %s' % (user, pwd, db, output_file))
+        subprocess.call(['mysqldump -u %s -p%s %s > %s' % (user, pwd, db, output_file)], shell=True)
         logger.info('DB dump done.')
